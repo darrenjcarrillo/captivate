@@ -12,6 +12,20 @@
 		background-color: Rgb(0 0 0 / 90%);
 		// background-color: $f;
 		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+
+
+		section.promo {
+			display: none;
+		}
+		
+		section.top {
+			display: none;
+		}
+
+		section.nav-container {
+			padding-top: 20px;
+		}
+
 	}
 
 	@media screen and (max-width: 992px) {
@@ -53,9 +67,10 @@
 			p {
 				color: $f;
 				text-align: center;
-				margin: 5px 0;
+				margin: 10px 0;
 				text-transform: uppercase;
 				letter-spacing: 1px;
+				font-weight: 500;
 			}
 		}
 	}
@@ -64,9 +79,10 @@
 	section.top {
 		margin: 0 auto;
 		background: transparent;
-		padding: 10px 0;
+		padding: 20px 0 10px;
 		position: relative;
 		// z-index: 1;
+		max-width: 1600px;
 
 		.nearestlocation {
 			margin: 0;
@@ -149,6 +165,10 @@
 					display: block;
 				}
 
+				&:hover {
+					opacity: 0.5;
+				}
+
 			}
 			
 
@@ -194,11 +214,12 @@
 
 	section.nav-container {
 		display: flex;
-		align-items: center;
-		justify-content: center;
+		flex-direction: column;
+		align-items: flex-start;
 		position: relative;
 		margin: 0 auto;
-		padding: 20px 0;
+		padding: 0 15px;
+		max-width: 1600px;
 
 
 		@media screen and (max-width: 992px) {
@@ -210,12 +231,13 @@
 
     
 		div.logo-main {
-			margin: 0 15px;
+			// margin: 0 15px;
 			position: relative;
       // display: none;
+			padding-bottom: 25px;
 
       @include isXLarge {
-        margin: 0 30px;
+        // margin: 0 30px;
       }
 
 			@media screen and (max-width: 1050px) {
@@ -291,6 +313,7 @@
 	nav.navdiv {
 		width: 100%;
 		padding: 0;
+		border-top: 0.5px solid #949F99;
 
 		@media screen and (max-width: 992px) {
 		}
@@ -506,13 +529,13 @@
 			// First level
 			ul.items {
 				display: flex;
-				justify-content: flex-end;
+				justify-content: space-between;
 				margin: 0;
 				width: 100%;
 				padding: 0;
 				position: relative;
         align-items: center;
-				padding: 0 15px;
+				// padding: 0 15px;
 
 				@media screen and (max-width: 992px) {
 					flex-direction: column;
@@ -588,11 +611,17 @@
 						a.menulink {
 							color: $f;
               margin-right: 0;
-							font-weight: 500;
+							font-weight: 300;
 
 							@media screen and (max-width: 992px) {
 								color: $b;
 							}
+						}
+					}
+
+					&.first-item {
+						a.menulink {
+							margin-left: 0;
 						}
 					}
 
@@ -610,9 +639,8 @@
 						line-height: 1.2;
 						text-align: center;
 						text-transform: capitalize;
-
-						font-weight: 400;
-						font-size: 16px;
+						font-weight: 300;
+						font-size: 22px;
 						color: $f;
 
 						@media screen and (max-width: 1400px) {
@@ -620,7 +648,7 @@
 						}
 
             @media screen and (max-width: 1250px) {
-							font-size: 14px;
+							font-size: 16px;
 							line-height: 1.2;
 						}
 
@@ -629,7 +657,7 @@
 						}
 
 						@media screen and (max-width: 992px) {
-							font-weight: normal;
+							font-weight: 300;
 							text-align: center;
 							font-size: 1.8rem;
 							line-height: 1.4;
