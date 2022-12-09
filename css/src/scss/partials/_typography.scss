@@ -34,33 +34,67 @@
 /*------------------------------------*\
 	  # Simple Typography Settings
   \*------------------------------------*/
-
-//Didot LT Headline
-$font-family: "linotype-didot-headline", serif;
+//  BODONI URW
+//BODONI URW NORMAL
+$font-family: "bodoni-urw", serif;
 $font-weight: 400;
 $font-style: normal;
 
-//Didot LT Headline
-$font-family: "linotype-didot-headline", serif;
+//BODONI URW MEDIUM
+$font-family: "bodoni-urw", serif;
 $font-weight: 500;
 $font-style: normal;
 
 
-//Didot LT Headline
-$font-family: "linotype-didot-headline", serif;
+//BODONI URW BOLD
+$font-family: "bodoni-urw", serif;
+$font-weight: 700;
+$font-style: normal;
+
+
+
+// URW FORM
+//URW FORM EXTRA LIGHT
+$font-family: "urw-form", sans-serif;
+$font-weight: 200;
+$font-style: normal;
+
+//URW FORM LIGHT
+$font-family: "urw-form", sans-serif;
+$font-weight: 300;
+$font-style: normal;
+
+
+//URW FORM NORMAL
+$font-family: "urw-form", sans-serif;
+$font-weight: 400;
+$font-style: normal;
+
+//URW FORM MEDIUM
+$font-family: "urw-form", sans-serif;
+$font-weight: 500;
+$font-style: normal;
+
+
+//URW FORM DEMI
+$font-family: "urw-form", sans-serif;
 $font-weight: 600;
 $font-style: normal;
 
-//Didot LT Headline
-$font-family: "linotype-didot-headline", serif;
+//URW FORM BOLD
+$font-family: "urw-form", sans-serif;
+$font-weight: 700;
+$font-style: normal;
+
+//URW FORM
+$font-family: "urw-form", sans-serif;
 $font-weight: 900;
 $font-style: normal;
 
 
-$font-primary:  "linotype-didot-headline", serif;
-$font-secondary: "helvetica", sans-serif;
-$font-third: "helvetica", sans-serif;
-// $font-fourth: "linotype-didot-headline", serif;
+$font-primary:  "bodoni-urw", serif;
+$font-secondary: "urw-form", sans-serif;
+$font-third: "urw-form", sans-serif;
 // Base Font for HTML
 $base-font-size: 18px;
 
@@ -263,7 +297,7 @@ p {
   font-size: 16px;
   letter-spacing: 0em;
   line-height: 1.8;
-  letter-spacing: none;
+
 
 
   @include is1500 {
