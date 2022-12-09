@@ -31,6 +31,7 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+      
     />
 
 </head>
@@ -385,7 +386,7 @@
       <section class="welcome">
         <div class="img">
 
-            <div class="swiper-container">
+            <div class="swiper mySwiper1">
               <div class="swiper-wrapper">
   
                 <div class="swiper-slide">
@@ -454,7 +455,7 @@
                     </div>
                 </div>
 
-                <div class="swiper-slide">
+                <div class="swiper-slide last-slide">
                   <picture>
                       <source media="(min-width: 576px)" srcset="img/welcome-3@2x.jpg">
                       <img src="img/welcome-3@2x.jpg" alt="" class="pic">
@@ -481,15 +482,17 @@
                 </div>
 
                 
-                
-            </div>
+                <div class="swiper-pagination"></div>
+              </div>
             
                 <!-- Add Pagination -->
-              <div class="swiper-pagination"></div>
+              
               <!-- Add Arrows -->
               <!-- <div class="swiper-button-next swiper-button-black"></div>
               <div class="swiper-button-prev swiper-button-black"></div> -->
-        </div>
+            </div>
+
+          </div>
 
       </section>
 
@@ -1556,10 +1559,28 @@
 
     <script defer src="public/frontend-bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-
-
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script> -->
     <script>
+
+
+      var swiper = new Swiper(".mySwiper1", {
+        speed: 1000,
+        effect: 'fade',
+        loop: true,
+        allowTouchMove: false,
+      //   autoplay: {
+      //    delay: 10000,
+      //  },
+       navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+          pagination: { 
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+      });
       
 
       var swiper = new Swiper(".mySwiper", {
@@ -1577,23 +1598,7 @@
         // keyboard: true,
       });
 
-      var swiper = new Swiper(".swiper-container", {
-        speed: 1000,
-        effect: 'fade',
-        loop: true,
-        allowTouchMove: false,
-        autoplay: {
-         delay: 10000,
-       },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      });
+
 
 
 
