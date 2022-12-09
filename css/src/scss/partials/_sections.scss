@@ -97,6 +97,11 @@ section.welcome {
               h1.sec-title {
                 font-weight: bold;
               }
+
+              h2 {
+                text-transform: uppercase;
+              }
+              
               p {
                 font-weight: bold;
                 margin-bottom: 0;
@@ -155,13 +160,13 @@ section.welcome {
         height: 10px;
         width: 10px;
         border-radius: 50%;
-        border: 2px solid $color-secondary; 
+        border: 2px solid $f; 
         // opacity: 1;
   
       }
   
       .swiper-pagination-bullet-active {
-        background: $color-secondary;
+        background: $f;
       }
   
       .swiper-button-next, .swiper-button-prev{
@@ -181,6 +186,55 @@ section.welcome {
   }
  
 }
+
+section.about {
+  background-color: $color-secondary;
+  position: relative;
+  display: flex;
+  padding: 100px 0;
+  // min-height: 800px;
+  // align-items: center;
+  // margin-top: 45px;
+
+  .container {
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h2 {
+        text-align: center;
+        margin-bottom: 0;
+      }
+
+
+      .col-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 80px 0;
+
+        .col-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 33%;
+
+
+          p {
+            text-align: center;
+          }
+
+        
+        }
+      }
+    }
+  }
+
+}
+
+
 
 section.col-main {
   position: relative;

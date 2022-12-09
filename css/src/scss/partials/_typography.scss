@@ -197,22 +197,16 @@ h6 {
 h1 {
   font-size: $header-size;
   font-weight: normal;
-  font-size: 40px;
+  font-size: 60px;
   letter-spacing: 2px;
   margin-bottom: $header-margin;
   text-transform: uppercase;
 
   @include isXLarge {
-    font-size: 45px;
+    
   }
 
-  @include isRetina {
-    font-size: 50px;
-  }
 
-  @include is1500 {
-    font-size: 60px;
-  }
 
 }
 
@@ -220,23 +214,17 @@ h1 {
 h2 {
   font-size: $header-size / 1.3;
   margin-bottom: 30px;
-  font-size: 35px;
-  font-weight: normal;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 200;
+  text-transform: capitalize;
   margin-top: 0;
-  line-height: 1.3;
+  line-height: 1.5;
   font-family: $font-secondary;
 
   @include isXLarge {
-    font-size: 45px;
+    font-size: 40px;
+    line-height: 51px;
   }
-
-  @include isRetina {
-    font-size: 50px;
-    line-height: 70px;
-  }
-
 
 
 }
@@ -244,20 +232,14 @@ h2 {
 h3 {
   font-size: $header-size / 1.5;
   margin-bottom: $header-margin / 1.5;
-  font-size: 20px;
-  font-weight: 400;
-  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: $font-secondary;
   text-transform: uppercase;
   margin-top: 0;
   letter-spacing: 2px;
-
-  @include isXLarge {
-    font-size: 30px;
-  }
-  
-  @include isRetina {
-    font-size: 40px;
-  }
+  line-height: 23px;
+  color: $color-main;
 }
 
 
@@ -281,6 +263,11 @@ h3 {
 h4 {
   font-size: $header-size / 1.7;
   margin-bottom: $header-margin / 1.7;
+
+  font-family: $font-secondary;
+  font-weight: 200;
+  font-size: 30px;
+  text-transform: capitalize;
 }
 
 h5 {
@@ -299,14 +286,7 @@ p {
   font-family: $font-secondary;
   font-size: 16px;
   font-weight: 200;
-  letter-spacing: 0em;
-  line-height: 1.8;
-
-
-  @include is1500 {
-    font-size: 18px;
-    line-height: 26px;
-  }
+  line-height: 28px;
 
 
   &.w {
