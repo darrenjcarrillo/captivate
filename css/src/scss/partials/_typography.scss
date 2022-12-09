@@ -198,9 +198,10 @@ h1 {
   font-size: $header-size;
   font-weight: normal;
   font-size: 60px;
-  letter-spacing: 2px;
   margin-bottom: $header-margin;
   text-transform: uppercase;
+  letter-spacing: 5px;
+
 
   @include isXLarge {
     

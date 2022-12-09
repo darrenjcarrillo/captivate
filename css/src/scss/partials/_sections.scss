@@ -100,6 +100,7 @@ section.welcome {
 
               h2 {
                 text-transform: uppercase;
+                letter-spacing: 5px;
               }
               
               p {
@@ -191,10 +192,7 @@ section.about {
   background-color: $color-secondary;
   position: relative;
   display: flex;
-  padding: 100px 0;
-  // min-height: 800px;
-  // align-items: center;
-  // margin-top: 45px;
+  padding: 80px 0;
 
   .container {
 
@@ -207,13 +205,14 @@ section.about {
       h2 {
         text-align: center;
         margin-bottom: 0;
+        
       }
 
 
       .col-container {
         display: flex;
         justify-content: space-between;
-        padding: 80px 0;
+        padding: 70px 0;
 
         .col-item {
           display: flex;
