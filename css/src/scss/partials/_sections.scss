@@ -233,6 +233,71 @@ section.about {
 
 }
 
+section.what-we-do {
+  background-color: $color-secondary;
+  position: relative;
+  display: flex;
+  padding: 50px 0 80px;
+
+  .container {
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .col-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 70px 0;
+
+        .col-item {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          width: 45%;
+
+
+          p {
+            text-align: center;
+          }
+
+          &:nth-child(1) {
+
+            h2 {
+              text-align: left;
+            }
+
+            .img-container {
+              width: 100%;
+  
+              picture {
+                display: flex;
+                justify-content: flex-end;
+              }
+            }
+          }
+
+          &:nth-child(2) {
+
+            .img-container {
+              margin-bottom: 40px;
+            }
+
+            p {
+              text-align: left;
+            }
+          }
+
+
+        
+        }
+      }
+    }
+  }
+
+}
 
 
 section.col-main {
