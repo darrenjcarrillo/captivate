@@ -1,0 +1,155 @@
+// Request Appointment Form
+
+// Input styles
+@mixin selectStyles {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  text-align: left;
+  box-shadow: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  height: auto;
+  border: none;
+  background-color: $f;
+  margin-top: 10px;
+ 
+  line-height: 20px;
+
+  font-size: 16px;
+  letter-spacing: 0em;
+  border-radius: 0;
+  background-color: $f;
+  font-family: $font-secondary;
+  text-transform: uppercase;
+  font-weight: normal;
+
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 10px 12px;
+  
+
+  @include is1500 {
+    font-size: 20px;
+    line-height: 45px;
+    padding: 5px 12px;
+  }
+
+
+}
+
+@mixin placeholderText {
+  color: #080808, 0.55;
+  font-style: normal;
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 0em;
+  line-height: 1.875;
+  border-radius: 0;
+  font-family: $font-third;
+  text-transform: uppercase;
+
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(8, 8, 8, 0.55);
+
+  @include is1500 {
+    font-size: 20px;
+    line-height: 45px;
+  }
+}
+
+input.form-control {
+  @include selectStyles;
+  border-radius: 0;
+  
+  &::placeholder {
+    @include placeholderText;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #515252;
+
+
+    &::placeholder {
+      color: #515252;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+
+  }
+  font-size: 16px;
+  line-height: 1.5;
+  
+  
+  @include is1500 {
+    font-size: 25px;
+    line-height: 45px;
+  }
+  color: rgba(8, 8, 8, 0.55);
+}
+
+select.form-control {
+  background: transparent
+    url("../../../../img/arrow.svg")
+    no-repeat right 1.5rem center/20px 20px;
+  @include selectStyles;
+
+  border-radius: 0;
+
+  text-transform: uppercase;
+
+
+  option {
+    text-transform: uppercase;
+  }
+
+  &::placeholder {
+    @include placeholderText;
+    
+  }
+
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #515252;
+
+    &::placeholder {
+      color: #515252;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  color: rgba(8, 8, 8, 0.55)
+
+}
+
+textarea.form-control {
+  @include selectStyles;
+
+  &::placeholder {
+    @include placeholderText;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 11px 7px rgba(0, 0, 0, 0.11);
+    color: #515252;
+  
+    &::placeholder {
+      color: #515252;
+    }
+  }
+
+ 
+
+}

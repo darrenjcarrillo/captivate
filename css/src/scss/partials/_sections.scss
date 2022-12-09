@@ -1,0 +1,929 @@
+// --------------------------------------------------------------------------
+// SECTION STYLES
+// --------------------------------------------------------------------------
+
+section.welcome {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+
+  .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    margin: 0 auto;
+
+    align-items: center;
+    justify-content: center;
+
+
+    @include isLarge {
+      &::after {
+        display: none;
+      }
+    }
+
+    picture {
+      width: 100%;
+      height: 100%;
+
+      &::after {
+        content: close-quote;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(0,0,0,0.958420868347339) 0%, rgba(9,9,9,0.18531162464985995) 25%, rgba(9,9,9,0.2665441176470589) 100%);
+        height: 100%;
+      }
+
+      @media screen and (max-width: 992px) {
+          
+        &::after {
+          content: close-quote;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background: linear-gradient(180deg, rgba(0,0,0,0.958420868347339) 0%, rgba(9,9,9,0.3) 70%, rgba(9,9,9,0.5) 100%);
+          height: 100%;
+        }
+      }
+
+      img {
+        object-fit: cover;
+        object-position: right;
+        height: 100%;
+        width: 100%;
+
+        @media screen and (max-width: 1240px) {
+          // opacity: 0.3;
+        }
+      }
+    }
+
+  }
+
+
+
+  .container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    padding: 0;
+    max-width: 100%;
+
+
+
+    .content {
+      width: 100%;
+      display: flex;
+
+      .col-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        
+        
+        .col-item {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          padding: 0 15px;
+
+          margin: 200px 0 70px;
+
+          @include isSmall {
+            margin: 0;
+          }
+      
+
+
+
+          @include isLarge {
+            align-items: flex-start;
+          }
+
+          @include isRetina {
+            width: 70%;
+          }
+
+          @include is1500 {
+            // width: 50%;
+          }
+
+          h3, h1 {
+            color: $f;
+          }
+
+          h1 {
+            font-weight: bold;
+            text-align: center;
+
+            @include isLarge {
+              text-align: left;
+            }
+          }
+
+          p {
+            width: 100%;
+            margin: 10px 0 30px;
+            color: $f;
+            text-align: center;
+
+            @include isLarge {
+              width: 60%;
+              text-align: left;
+            }
+
+  
+            @include is1500 {
+              width: 60%;
+            }
+          }
+
+          .btn-container {
+            display: flex;
+            flex-direction: column;
+
+
+            .col-btn {
+              display: flex;
+              flex-direction: column;
+
+              @include isLarge {
+                flex-direction: row;
+              }
+
+              .ui-btn {
+                margin: 10px;
+              }
+
+            }
+          }
+
+
+        }
+      }
+    }
+  }
+
+}
+
+section.col-main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  .container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    max-width: 100%;
+    padding: 0;
+
+
+    .content {
+      width: 100%;
+      display: flex;
+
+
+      .col-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+
+        @include isLarge {
+          flex-direction: row;
+          justify-content: flex-end;
+        }
+        
+        .col-item {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-end;
+          text-align: center;
+
+          @include isLarge {
+            width: 50%;
+          }
+ 
+
+          .col-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            
+
+            @include isLarge {
+              padding: 0 15px 0 50px;
+            }
+
+            @include isRetina {
+              padding: 0 20px 0 80px;
+            }
+            
+
+            .col-content-container {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              padding: 50px 15px;
+
+              @include isLarge {
+                align-items: flex-start;
+                padding: 50px 0;
+              }
+
+
+              h2 {
+                margin-bottom: 30px;
+                text-align: center;
+
+                @include isLarge {
+                  text-align: left;
+                }
+
+                @include is1700 {
+                  width: 80%;
+                }
+              }
+
+              p {
+                text-align: center;
+
+                @include isLarge {
+                  text-align: left;
+                }
+              }
+
+                .treatment-links {
+                  margin-top: 20px;
+                  display: flex;
+                  flex-direction: column;
+                  width: 100%;
+                  align-items: flex-start;
+
+    
+
+                  ul {
+                    padding: 0;
+                    padding-left: 40px;
+
+                    li {
+                      text-align: left;
+                      list-style: none;
+                      margin: 20px 0;
+
+                      @include is1500 {
+                        margin: 10px 0;
+                      }
+                      
+
+                      a {
+                        font-weight: normal;
+                        color: $b;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        font-size: 18px;
+                        text-transform: uppercase;
+                        font-family: $font-primary;
+
+                        @include is1500 {
+                          font-size: 25px;
+                        }
+
+
+                        span.icon {
+                          margin-right: 15px;
+
+                          width: 25px;
+                          height: 25px;
+
+                          &.active {
+                            display: none;
+                          }
+                          
+                        }
+
+                        &:hover {
+
+                          span.icon {
+
+                            &.active {
+                              display: block;
+                            }
+
+                            &.not-active {
+                              display: none;
+  
+                            }
+                          }
+                        }
+
+                        
+                      }
+                    }
+                  }
+                }
+
+                .btn-container {
+                  margin-top: 40px;
+                }
+              
+            }
+          }
+
+
+          &:nth-child(1) {
+            width: 100%;
+
+            @include isLarge {
+              width: 50%;
+            }
+           
+
+
+            .col-content {
+              padding: 0;
+        
+              .slider-container {
+                height: 100%;
+                width: 100%;
+                display: flex;
+              
+  
+                @include isLarge {
+                  width: 100%;
+                }
+
+                
+                .mySwiper {  
+                  width: 100%;
+                  margin-right: 0;
+          
+                  @include isLarge {
+                    width: 100%;
+                  }
+  
+                  .swiper-slide {
+                    
+                    .image-wrapper {
+                      width: 100%;
+                      height: 100%;
+    
+                      picture {
+                        width: 100%;
+                        height: 100%;
+                  
+                        &::after {
+                          content: close-quote;
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          width: 100%;
+                          background: rgb(0,0,0);
+                          background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(12,29,49,0.8015581232492998) 100%);
+                          height: 100%;
+                        }
+                  
+                        img {
+                          object-fit: cover;
+                          object-position: center;
+                          height: 100%;
+                          width: 100%;
+                  
+                          @media screen and (max-width: 1240px) {
+                            // opacity: 0.3;
+                          }
+                        }
+                      }
+
+                      &.gradient-2 {
+                        picture {
+                    
+                          &::after {
+                            content: close-quote;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            background: rgb(0,0,0);
+                            background: linear-gradient(180deg, rgba(12,29,49,0.25) 100%, rgba(12,29,49,1) 100%);
+                            height: 100%;
+                          }
+          
+                        }
+                      }
+                    }
+
+                    .text-wrapper {
+                      position: absolute;
+                      top: 50%;
+                      width: 100%;
+                      padding: 0 15px;
+                      margin: 0 auto;
+
+                      left: 50%;
+                      // top: 50%;
+                      transform: translate(-50%, -50%);
+                      
+                      @include isLarge {
+                        width: 85%;
+                        padding: 0;
+                        top: 65%;
+                      }
+
+                      @include is1700{
+                        top: 73%;
+                      }
+
+                      h3, p {
+                        color: $f;
+                      }
+                    }
+                  }
+          
+                
+    
+                    .swiper-pagination-bullet{
+                      background-color: $f;
+                    }
+  
+                    .swiper-pagination-bullet-active {
+                      background-color: $f;
+                    }
+                
+                    .swiper-button-next,.swiper-button-prev {
+                      color: $f;
+                      right: 2.5%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      transition: 0.3s;
+                      top: 93%;
+                      width: 35px;
+                      height: 35px;
+                      padding: 12px;
+
+                      @include isSmall {
+                        width: 40px;
+                        height: 40px;
+                      }
+
+                      @include isMedium {
+                        width: 60px;
+                        height: 60px;
+                      }
+
+                      @include isXLarge {
+                        top: 94%
+                      }
+
+                      @include isRetina {
+                        top: 96%;
+                      }
+          
+          
+                      @include isLarge {
+                        right: 2.5%;
+                      }
+                
+                
+                      &:after {
+                        // font-size: 15px;
+                        // width: 30px;
+                        // height: 30px;
+                        // border-radius: 50%;
+                        // background-color: $f;
+                        // font-weight: bold;
+                        // color: $color-secondary;
+                        // display: flex;
+                        // align-items: center;
+                        // justify-content: center;
+                        display: none;
+                      }
+                
+                
+                
+                      &:hover {
+                        opacity: 0.6;
+                        transition: 0.3;
+                      }
+
+                      svg {
+                        width: 100%;
+                        height: 100%;
+                      }
+                    }
+                
+                    .swiper-button-prev {
+                      left: 75%;
+                      background-color: $f;
+                 
+      
+                      @include is1500 {
+                        left: 82%;
+                      }
+                    }
+                
+                }
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+
+  // Column Reverse
+  &.col-main-reverse  {
+    
+    .content {
+      .col-container {
+        flex-direction: column;
+        
+        @include isLarge {
+          flex-direction: row-reverse;
+        }
+
+        .col-item {
+          width: 100%;
+          
+          @include isLarge {
+            width: 53%;
+          }
+
+          &:nth-child(1) {
+            width: 100%;
+
+            @include isLarge {
+              width: 47%;
+            }
+
+            .col-content {
+
+              .slider-container {
+
+                .mySwiper {  
+  
+                    .swiper-button-next,.swiper-button-prev {
+                      left: 13%;
+
+                      @include isXLarge {
+                        top: 94%;
+                        left: 15%;
+                      }
+  
+                      @include isRetina {
+                        top: 96%;
+                      }
+
+                      @include is1500 {
+                        // left: 7.5%;
+                        left: 10%;
+                      }
+                
+  
+                    }
+                
+                    .swiper-button-prev {
+                      left: 0%;
+                      background-color: $f;
+                
+                    }
+                
+                }
+
+                &.no-gradient {
+
+                  .mySwiper {  
+
+                    .swiper-slide {
+                    
+                      .image-wrapper {
+  
+                        picture {
+
+                          &::after {
+                            display: none;
+                          }
+                    
+     
+                        }
+  
+  
+                      }
+
+                    }
+  
+                    .swiper-button-next,.swiper-button-prev {
+                      color: $f;
+                      left: 89.5%;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      transition: 0.3s;
+                      top: 93%;
+                      width: 35px;
+                      height: 35px;
+                      padding: 12px;
+
+                      @include isSmall {
+                        width: 40px;
+                        height: 40px;
+                      }
+
+                      @include isMedium {
+                        width: 60px;
+                        height: 60px;
+                      }
+  
+
+
+                      @include isXLarge {
+                        top: 94%
+                      }
+
+                      @include isRetina {
+                        top: 96%;
+                      }
+
+          
+          
+                      @include isLarge {
+                        left: 89.5%
+                      }
+                
+                      @include is1700 {
+                        left: 90.5%
+                      }
+                
+    
+                
+                
+                      &:hover {
+                        opacity: 0.6;
+                        transition: 0.3;
+                      }
+
+                      svg {
+                        width: 100%;
+                        height: 100%;
+                      }
+                    }
+                
+                    .swiper-button-prev {
+                      left: 75%;
+                      background-color: $f;
+                 
+      
+                      @include is1500 {
+                        left: 82%;
+                      }
+                    }
+                
+                  }
+                }
+              }
+            }
+          }
+
+          &:nth-child(2) {
+            .col-content {
+              // padding: 0 15px;
+
+              @include isLarge {
+                padding: 0 50px 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+section.form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  min-height: 800px;
+
+
+  .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    margin: 0 auto;
+
+    align-items: center;
+    justify-content: center;
+
+
+    picture {
+      width: 100%;
+      height: 100%;
+
+      &::after {
+        content: close-quote;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,0.4) 100%, rgba(0,0,0,0) 100%);
+        height: 100%;
+      }
+
+      img {
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+
+        @media screen and (max-width: 1240px) {
+          // opacity: 0.3;
+        }
+      }
+    }
+
+  }
+
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    
+    @include isLarge {
+      flex-direction: row;
+      max-width: 97%;
+    }
+
+
+    .formcontent {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  
+      .content-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+
+
+        @include isLarge {
+          flex-direction: row;
+        }
+
+
+        .content {
+          width: 100%;
+          margin-bottom: 30px;
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          justify-content: center;
+          text-align: center;
+
+          @include isLarge {
+            width: 45%;
+          }
+  
+          h2 {
+            font-size: 30px;
+            color: $f;
+            line-height: 1.5;
+            text-align: left;
+  
+            @include isLarge {
+              font-size: 40px;
+            }
+  
+            @include isRetina {
+              font-size: 45px;
+            }
+          }
+  
+          p {
+            width: 100%;
+            text-align: left;
+            margin: 20px 0 0;
+
+            color: $f;
+            
+      
+            a {
+              color: $f;
+  
+              &:hover {
+                opacity: 0.5;
+              }
+            }
+          }
+        }
+  
+        form {
+          width: 
+          100%;
+          
+          @include isLarge {
+            width: 45%;
+           
+          }
+        }
+  
+        .formpwrap {
+          display: flex;
+          gap: 15px;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: flex-start;
+          width: 100%;
+          margin: 0 auto;
+      
+          .input {
+            width: 100%;
+  
+            @include isMedium {
+              width: 45%;
+            }
+
+          }
+        }
+  
+        button.ui-btn {
+          border: none;
+          margin-bottom: 10px;
+          color: $f;
+          background-color: transparent;
+          border: 2px solid $f;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 30px auto 0;
+          font-size: 16px;
+
+          @include isLarge {
+            font-size: 20px;
+          }
+
+          &:hover {
+            opacity: 0.5;
+          }
+  
+        }
+      }
+
+    }
+
+    .image-container {
+      width: 100%;
+      margin-top: 50px;
+      
+
+      @include isLarge {
+        width: 50%;
+        margin-top: 0;
+      }
+
+      img {
+        margin: 0 auto;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+  }
+  
+
+}

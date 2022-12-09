@@ -1,0 +1,342 @@
+// Footer
+
+#main {
+  background-color: $color-sixth;
+  padding: 50px 0 0;
+
+  @include isLarge {
+    padding: 80px 0 0;
+  }
+
+  section.footer-main {
+
+  .container {
+    display: flex;
+    max-width: 1900px;
+    justify-content: space-between;
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+    }
+  }
+    .content {
+      display: flex;
+      width: 100%;
+      align-items: flex-start;
+
+      @media screen and (max-width: 992px) {
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .block-col {
+        width: 70%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        @include isRetina {
+          width: 60%;
+        }
+        
+
+        .col-container {
+    
+          text-align: center;
+
+          @include isLarge {
+            text-align: left;
+          }
+
+          h2 {
+            font-family: $font-primary;
+            font-weight: normal;
+            font-size: 16px;
+            text-decoration: underline;
+            line-height: 28px;
+            margin: 0;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 0;
+      
+          }
+          
+          .col-items {
+            display: flex;
+
+            .col-item {
+              display: flex;
+              flex-direction: column;
+
+              @include isLarge {
+                padding-right: 40px;
+              }
+
+              span.item {
+                a {
+                  // text-transform: uppercase;
+                  color: $color-third;
+                  line-height: 30px;
+                  font-size: 16px;
+                  font-family: $font-secondary;
+
+                  &:hover {
+                    text-decoration: none;
+                    opacity: 0.5;
+                  }
+                }
+
+                p {
+                  font-size: 16px;
+                  margin: 0;
+                  color: $color-third;
+                  font-family: $font-secondary;
+                  line-height: 30px;
+                }
+
+                &.phone-number {
+                  // margin: 20px 0;
+              
+                }
+
+                &.locations {
+                  display: flex;
+                  flex-direction: column;
+                  margin-bottom: 30px;
+                }
+              }
+              
+            }
+          }
+
+        }
+
+        &:nth-child(1) {
+          width: 30%;
+          display: flex;
+          justify-content: center;
+
+
+          .col-container {
+
+            .col-items {
+
+
+              .col-item {
+                padding: 0;
+
+                .item {
+                  
+                  display: flex;
+                  justify-content: center;
+
+                  a {
+                    margin: 40px 20px 20px;
+
+                  }
+                }
+              }
+            }
+          }
+
+        }
+
+        &:nth-child(2) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          @include isLarge {
+            flex-direction: row;
+            align-items: flex-start;
+          }
+
+
+          .col-container {
+
+            .col-items {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              padding-bottom: 30px;
+  
+              @include isLarge {
+                flex-direction: row;
+                padding-bottom: 0;
+                align-items: flex-start;
+              }
+
+            }
+
+            
+            &:nth-last-child(1) {
+              .col-items {
+
+                padding-bottom: 0;
+
+                .col-item {
+                  padding: 0;
+
+                  @include is1500 {
+                    padding-right: 40px;
+                  }
+                }
+              }
+            }
+            
+          }
+        }
+      }
+
+
+
+    }
+  }
+
+    // copywrite
+  .footercopy {
+    padding: 7px 0 0;
+    position: relative;
+    z-index: 1;
+
+
+    .container {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      max-width: 100%;
+    }
+
+
+    @media screen and (max-width: 700px) {
+      margin-top: 0;
+    }
+    .socialbar {
+      display: flex;
+      @media screen and (max-width: 700px) {
+        padding: 0 0 20px;
+      }
+    }
+
+    .row {
+      width: 100%;
+      margin-top: 50px;
+
+      @include isLarge {
+        margin-top: 80px;
+      }
+
+      &:nth-child(1) {
+        background-color: $b;
+        display: flex;
+        justify-content: center;
+        padding: 10px 15px;
+
+        @include isLarge{
+          justify-content: center;
+        }
+        
+        .flexcen {
+          margin: 0;
+          .copy__content {
+            margin: 0 auto;
+            color: $f;
+            text-transform: capitalize;
+            text-align: center;
+
+            span {
+              color: $f;
+              a {
+                color: $f;
+                font-size: 16px;
+                
+              }
+            }
+          }
+
+        }
+  
+      }
+
+      .footer-links {
+      
+        
+       @include isLarge {
+        padding-left: 10px;
+       }
+        
+
+        @include isRetina {
+          position: absolute;
+          right: 15px;
+        }
+
+        a {
+          font-weight: normal;
+        }
+      }
+    }
+
+
+    .flexcen {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+ 
+      
+      @media screen and (max-width: 1200px) {
+        flex-direction: column;
+      }
+    }
+
+    .flexcen .copy__content {
+      margin: 0 auto;
+      color: $b;
+      text-transform: capitalize;
+
+      font-size: 16px;
+
+      @media screen and (max-width: 700px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    span.l {
+      color: $b;
+
+      font-size: 16px;
+      font-weight: normal;
+
+      @media screen and (max-width: 700px) {
+        display: none;
+      }
+    }
+    .copy__content a {
+      color: $b;
+
+      font-size: 16px;
+      font-weight: normal;
+    }
+
+    .flexcen {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      margin: 0 ;
+      margin: 0 auto 20px;
+      font-weight: normal;
+
+     
+      justify-content: space-between
+    }
+
+  }
+
+}
+
+
+
