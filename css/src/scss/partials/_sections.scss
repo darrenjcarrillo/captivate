@@ -299,6 +299,139 @@ section.what-we-do {
 
 }
 
+section.iv-vitamin {
+  background-color: $color-secondary;
+  position: relative;
+  display: flex;
+  padding: 50px 0 80px;
+
+  .container {
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .slider-container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+      
+
+        @include isLarge {
+          width: 100%;
+        }
+
+        
+        .mySwiper {  
+          width: 100%;
+          margin-right: 0;
+          padding-bottom: 100px;
+  
+          @include isLarge {
+            width: 100%;
+          }
+
+          .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h3, p, {
+              text-align: center;
+            }
+    
+          }
+  
+        
+
+            .swiper-pagination-bullet{
+              // background-color: $f;
+            }
+
+            .swiper-pagination-bullet-active {
+              // background-color: $f;
+            }
+        
+            .swiper-button-next,.swiper-button-prev {
+              color: $f;
+              // right:35%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: 0.3s;
+              top: 93%;
+              width: 35px;
+              height: 35px;
+              padding: 12px;
+
+              right: 35%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+
+              @include isSmall {
+                width: 40px;
+                height: 40px;
+              }
+
+              @include isMedium {
+                width: 60px;
+                height: 60px;
+              }
+
+              @include isXLarge {
+                top: 94%
+              }
+
+              @include isRetina {
+                top: 96%;
+              }
+  
+  
+              @include isLarge {
+                // right: 45%;
+              }
+        
+        
+              &:after {
+
+                display: none;
+              }
+        
+        
+        
+              &:hover {
+                opacity: 0.6;
+                transition: 0.3;
+              }
+
+              svg {
+                width: 100%;
+                height: 100%;
+              }
+            }
+        
+            .swiper-button-prev {
+              rotate: 180deg;
+              // left: 35%;
+              left: 35%;
+              transform: translate(-50%, 50%);
+
+              @include is1500 {
+                
+              }
+            }
+        
+        }
+      }
+
+    }
+  }
+
+}
+
 
 section.col-main {
   position: relative;
@@ -484,188 +617,7 @@ section.col-main {
             .col-content {
               padding: 0;
         
-              .slider-container {
-                height: 100%;
-                width: 100%;
-                display: flex;
-              
-  
-                @include isLarge {
-                  width: 100%;
-                }
-
-                
-                .mySwiper {  
-                  width: 100%;
-                  margin-right: 0;
-          
-                  @include isLarge {
-                    width: 100%;
-                  }
-  
-                  .swiper-slide {
-                    
-                    .image-wrapper {
-                      width: 100%;
-                      height: 100%;
-    
-                      picture {
-                        width: 100%;
-                        height: 100%;
-                  
-                        &::after {
-                          content: close-quote;
-                          position: absolute;
-                          top: 0;
-                          left: 0;
-                          width: 100%;
-                          background: rgb(0,0,0);
-                          background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(12,29,49,0.8015581232492998) 100%);
-                          height: 100%;
-                        }
-                  
-                        img {
-                          object-fit: cover;
-                          object-position: center;
-                          height: 100%;
-                          width: 100%;
-                  
-                          @media screen and (max-width: 1240px) {
-                            // opacity: 0.3;
-                          }
-                        }
-                      }
-
-                      &.gradient-2 {
-                        picture {
-                    
-                          &::after {
-                            content: close-quote;
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            width: 100%;
-                            background: rgb(0,0,0);
-                            background: linear-gradient(180deg, rgba(12,29,49,0.25) 100%, rgba(12,29,49,1) 100%);
-                            height: 100%;
-                          }
-          
-                        }
-                      }
-                    }
-
-                    .text-wrapper {
-                      position: absolute;
-                      top: 50%;
-                      width: 100%;
-                      padding: 0 15px;
-                      margin: 0 auto;
-
-                      left: 50%;
-                      // top: 50%;
-                      transform: translate(-50%, -50%);
-                      
-                      @include isLarge {
-                        width: 85%;
-                        padding: 0;
-                        top: 65%;
-                      }
-
-                      @include is1700{
-                        top: 73%;
-                      }
-
-                      h3, p {
-                        color: $f;
-                      }
-                    }
-                  }
-          
-                
-    
-                    .swiper-pagination-bullet{
-                      background-color: $f;
-                    }
-  
-                    .swiper-pagination-bullet-active {
-                      background-color: $f;
-                    }
-                
-                    .swiper-button-next,.swiper-button-prev {
-                      color: $f;
-                      right: 2.5%;
-                      display: flex;
-                      align-items: center;
-                      justify-content: center;
-                      transition: 0.3s;
-                      top: 93%;
-                      width: 35px;
-                      height: 35px;
-                      padding: 12px;
-
-                      @include isSmall {
-                        width: 40px;
-                        height: 40px;
-                      }
-
-                      @include isMedium {
-                        width: 60px;
-                        height: 60px;
-                      }
-
-                      @include isXLarge {
-                        top: 94%
-                      }
-
-                      @include isRetina {
-                        top: 96%;
-                      }
-          
-          
-                      @include isLarge {
-                        right: 2.5%;
-                      }
-                
-                
-                      &:after {
-                        // font-size: 15px;
-                        // width: 30px;
-                        // height: 30px;
-                        // border-radius: 50%;
-                        // background-color: $f;
-                        // font-weight: bold;
-                        // color: $color-secondary;
-                        // display: flex;
-                        // align-items: center;
-                        // justify-content: center;
-                        display: none;
-                      }
-                
-                
-                
-                      &:hover {
-                        opacity: 0.6;
-                        transition: 0.3;
-                      }
-
-                      svg {
-                        width: 100%;
-                        height: 100%;
-                      }
-                    }
-                
-                    .swiper-button-prev {
-                      left: 75%;
-                      background-color: $f;
-                 
-      
-                      @include is1500 {
-                        left: 82%;
-                      }
-                    }
-                
-                }
-              }
+   
             }
           }
 
