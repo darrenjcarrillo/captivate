@@ -339,9 +339,12 @@ section.iv-vitamin {
             align-items: center;
             justify-content: center;
 
-            h3, p, {
+            h3, p {
+              color: $f;
               text-align: center;
             }
+
+
     
           }
   
@@ -362,13 +365,11 @@ section.iv-vitamin {
               align-items: center;
               justify-content: center;
               transition: 0.3s;
-              top: 93%;
+              top: 96%;
               width: 35px;
               height: 35px;
               padding: 12px;
-
               right: 35%;
-              top: 50%;
               transform: translate(-50%, -50%);
 
               @include isSmall {
@@ -381,13 +382,6 @@ section.iv-vitamin {
                 height: 60px;
               }
 
-              @include isXLarge {
-                top: 94%
-              }
-
-              @include isRetina {
-                top: 96%;
-              }
   
   
               @include isLarge {
@@ -419,10 +413,16 @@ section.iv-vitamin {
               left: 35%;
               transform: translate(-50%, 50%);
 
+              span {
+                rotate: -180deg;
+              }
+
               @include is1500 {
                 
               }
             }
+
+        
         
         }
       }
