@@ -662,6 +662,51 @@ section.latest-stories {
 
 }
 
+section.col-instagram {
+  background-color: $color-secondary;
+  position: relative;
+  display: flex;
+  padding: 80px 0;
+
+  .container {
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .col-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .col-item {
+          display: flex;
+          // justify-content: space-between;
+          justify-content: center;
+          // gap: 30px;
+
+          .image-container {
+            margin: 10px;
+
+            a {
+              &::before {
+                display: none;
+              }
+            }
+          }
+
+
+        }
+      }
+
+
+    }
+  }
+
+}
+
 
 section.form {
   position: relative;
