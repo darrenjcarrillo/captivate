@@ -344,7 +344,13 @@ section.iv-vitamin {
               text-align: center;
             }
 
+            p {
+              margin: 0
+            }
 
+            .btn-container {
+              margin-top: 10px;
+            }
     
           }
   
@@ -381,12 +387,6 @@ section.iv-vitamin {
                 width: 60px;
                 height: 60px;
               }
-
-  
-  
-              @include isLarge {
-                // right: 45%;
-              }
         
         
               &:after {
@@ -405,6 +405,12 @@ section.iv-vitamin {
                 width: 100%;
                 height: 100%;
               }
+
+              span {
+                margin: 0 15px;
+                font-size: 20px;
+                font-weight: 500;
+              }
             }
         
             .swiper-button-prev {
@@ -412,9 +418,11 @@ section.iv-vitamin {
               // left: 35%;
               left: 35%;
               transform: translate(-50%, 50%);
+              opacity: 0.13;
 
               span {
                 rotate: -180deg;
+    
               }
 
               @include is1500 {
@@ -425,6 +433,10 @@ section.iv-vitamin {
         
         
         }
+      }
+
+      .btn-container {
+        margin-top: 30px;
       }
 
     }
