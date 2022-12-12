@@ -303,7 +303,7 @@ section.iv-vitamin {
   background-color: $color-secondary;
   position: relative;
   display: flex;
-  padding: 50px 0 80px;
+  padding: 80px 0;
 
   .container {
 
@@ -445,17 +445,18 @@ section.iv-vitamin {
 }
 
 
-section.col-main {
+section.treatment {
   position: relative;
   display: flex;
   align-items: center;
-  overflow: hidden;
+  background-color: $color-secondary;
+  padding: 100px 0;
 
   .container {
     position: relative;
     z-index: 2;
     display: flex;
-    max-width: 100%;
+    max-width: 1400px;
     padding: 0;
 
 
@@ -478,158 +479,83 @@ section.col-main {
         .col-item {
           width: 100%;
           display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-end;
-          text-align: center;
+
 
           @include isLarge {
-            width: 50%;
+            width: 60%;
           }
  
 
           .col-content {
-            width: 100%;
-            height: 100%;
             display: flex;
-            align-items: center;
-            
-
-            @include isLarge {
-              padding: 0 15px 0 50px;
-            }
-
-            @include isRetina {
-              padding: 0 20px 0 80px;
-            }
-            
-
-            .col-content-container {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
-              padding: 50px 15px;
-
-              @include isLarge {
-                align-items: flex-start;
-                padding: 50px 0;
-              }
-
-
-              h2 {
-                margin-bottom: 30px;
-                text-align: center;
-
-                @include isLarge {
-                  text-align: left;
-                }
-
-                @include is1700 {
-                  width: 80%;
-                }
-              }
-
-              p {
-                text-align: center;
-
-                @include isLarge {
-                  text-align: left;
-                }
-              }
-
-                .treatment-links {
-                  margin-top: 20px;
-                  display: flex;
-                  flex-direction: column;
-                  width: 100%;
-                  align-items: flex-start;
-
-    
-
-                  ul {
-                    padding: 0;
-                    padding-left: 40px;
-
-                    li {
-                      text-align: left;
-                      list-style: none;
-                      margin: 20px 0;
-
-                      @include is1500 {
-                        margin: 10px 0;
-                      }
-                      
-
-                      a {
-                        font-weight: normal;
-                        color: $b;
-                        display: flex;
-                        justify-content: flex-start;
-                        align-items: center;
-                        font-size: 18px;
-                        text-transform: uppercase;
-                        font-family: $font-primary;
-
-                        @include is1500 {
-                          font-size: 25px;
-                        }
-
-
-                        span.icon {
-                          margin-right: 15px;
-
-                          width: 25px;
-                          height: 25px;
-
-                          &.active {
-                            display: none;
-                          }
-                          
-                        }
-
-                        &:hover {
-
-                          span.icon {
-
-                            &.active {
-                              display: block;
-                            }
-
-                            &.not-active {
-                              display: none;
-  
-                            }
-                          }
-                        }
-
-                        
-                      }
-                    }
-                  }
-                }
-
-                .btn-container {
-                  margin-top: 40px;
-                }
-              
-            }
+            flex-direction: column;
+            align-items: flex-start;
           }
 
 
           &:nth-child(1) {
-            width: 100%;
 
-            @include isLarge {
-              width: 50%;
+            .col-content {
+              width: 80%;
+              margin: 0 auto;
+              display: flex;
+              align-items: flex-start;
+              justify-content: center;
+
+
+              p {
+                margin-bottom: 50px;
+              }
+
+              h3 {
+                font-size: 20px;
+              }
+
+
+              .treatment-links {
+                display: flex;
+                margin: 10px 0 50px;
+
+                ul {
+                  
+                  li {
+                    list-style: none;
+
+                    a {
+                      display: flex;
+                      align-items: center;
+                      justify-content: flex-start;
+                      line-height: 28px;
+                      color: $f;
+
+                      div.wline {
+                        width: 20px;
+                        height: 2px;
+                        background-color: $f;
+                        margin-right: 20px;
+                      }
+                    }
+                  }
+
+                  &:nth-child(2) {
+                    padding-left: 60px;
+                  }
+                }
+
+
+              }
             }
-           
+          }
+
+
+          &:nth-child(2) {
+            width: 40%;
+            display: flex;
+            justify-content: flex-end;
 
 
             .col-content {
-              padding: 0;
-        
-   
+
             }
           }
 
