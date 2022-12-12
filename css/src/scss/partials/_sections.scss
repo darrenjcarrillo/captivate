@@ -444,8 +444,7 @@ section.iv-vitamin {
 
 }
 
-
-section.treatment {
+section.col-main {
   position: relative;
   display: flex;
   align-items: center;
@@ -566,167 +565,30 @@ section.treatment {
 
 
   // Column Reverse
-  &.col-main-reverse  {
+  &.col-reverse  {
     
     .content {
       .col-container {
-        flex-direction: column;
-        
-        @include isLarge {
-          flex-direction: row-reverse;
-        }
+        flex-direction: row-reverse;
+
+
+
 
         .col-item {
-          width: 100%;
-          
-          @include isLarge {
-            width: 53%;
-          }
 
           &:nth-child(1) {
-            width: 100%;
-
-            @include isLarge {
-              width: 47%;
-            }
-
             .col-content {
+              display: flex;
+              justify-content: flex-end;
 
-              .slider-container {
-
-                .mySwiper {  
-  
-                    .swiper-button-next,.swiper-button-prev {
-                      left: 13%;
-
-                      @include isXLarge {
-                        top: 94%;
-                        left: 15%;
-                      }
-  
-                      @include isRetina {
-                        top: 96%;
-                      }
-
-                      @include is1500 {
-                        // left: 7.5%;
-                        left: 10%;
-                      }
-                
-  
-                    }
-                
-                    .swiper-button-prev {
-                      left: 0%;
-                      background-color: $f;
-                
-                    }
-                
-                }
-
-                &.no-gradient {
-
-                  .mySwiper {  
-
-                    .swiper-slide {
-                    
-                      .image-wrapper {
-  
-                        picture {
-
-                          &::after {
-                            display: none;
-                          }
-                    
-     
-                        }
-  
-  
-                      }
-
-                    }
-  
-                    .swiper-button-next,.swiper-button-prev {
-                      color: $f;
-                      left: 89.5%;
-                      display: flex;
-                      align-items: center;
-                      justify-content: center;
-                      transition: 0.3s;
-                      top: 93%;
-                      width: 35px;
-                      height: 35px;
-                      padding: 12px;
-
-                      @include isSmall {
-                        width: 40px;
-                        height: 40px;
-                      }
-
-                      @include isMedium {
-                        width: 60px;
-                        height: 60px;
-                      }
-  
-
-
-                      @include isXLarge {
-                        top: 94%
-                      }
-
-                      @include isRetina {
-                        top: 96%;
-                      }
-
-          
-          
-                      @include isLarge {
-                        left: 89.5%
-                      }
-                
-                      @include is1700 {
-                        left: 90.5%
-                      }
-                
-    
-                
-                
-                      &:hover {
-                        opacity: 0.6;
-                        transition: 0.3;
-                      }
-
-                      svg {
-                        width: 100%;
-                        height: 100%;
-                      }
-                    }
-                
-                    .swiper-button-prev {
-                      left: 75%;
-                      background-color: $f;
-                 
-      
-                      @include is1500 {
-                        left: 82%;
-                      }
-                    }
-                
-                  }
-                }
+              .icon-wrapper {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
               }
             }
           }
 
-          &:nth-child(2) {
-            .col-content {
-              // padding: 0 15px;
-
-              @include isLarge {
-                padding: 0 50px 0;
-              }
-            }
-          }
         }
       }
     }
