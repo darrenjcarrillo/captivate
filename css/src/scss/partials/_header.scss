@@ -235,6 +235,10 @@
 			position: relative;
       // display: none;
 			padding-bottom: 25px;
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			align-items: flex-end;
 
       @include isXLarge {
         // margin: 0 30px;
