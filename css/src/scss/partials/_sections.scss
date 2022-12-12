@@ -10,7 +10,7 @@ section.welcome {
   margin-top: 45px;
 
   @include isRetina {
-    min-height: 100vh;
+    min-height: 900px;
   }
 
 
@@ -595,6 +595,73 @@ section.col-main {
   }
 
 }
+
+
+section.latest-stories {
+  background-color: $color-secondary;
+  position: relative;
+  display: flex;
+  padding: 80px 0;
+
+  .container {
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .col-container {
+        display: flex;
+        justify-content: space-between;
+
+        .col-item {
+          width: 27%;
+          display: flex;
+          align-items: flex-start;
+
+          div.wline {
+            width: 35px;
+            height: 2px;
+            background-color: $f;
+            margin-right: 20px;
+            margin-top: 12px;
+          }
+
+          .col-content {
+            span.title {
+              font-size: 16px;
+              font-weight: 500;
+              color: $color-main;
+            }
+
+            span.date {
+              color: $color-main;
+              font-weight: 300;
+              font-size: 18px;
+            }
+
+
+            p {
+              font-size: 28px;
+              font-weight: 300;
+              line-height: 36px;
+              margin-top: 20px;
+            }
+          }
+
+
+
+        }
+
+      }
+
+
+    }
+  }
+
+}
+
 
 section.form {
   position: relative;
