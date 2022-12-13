@@ -512,7 +512,12 @@ section.col-main {
   display: flex;
   align-items: center;
   background-color: $color-secondary;
-  padding: 100px 0;
+  padding: 50px 0;
+
+  @include isLarge {
+    padding: 100px 0 50px;
+
+  }
 
   .container {
     position: relative;
@@ -669,11 +674,14 @@ section.col-main {
   &.col-reverse  {
     
     .content {
+
+
       .col-container {
-        flex-direction: row-reverse;
+        flex-direction: column;
 
-
-
+        @include isLarge {
+          flex-direction: row-reverse;
+        }
 
         .col-item {
 
@@ -682,10 +690,27 @@ section.col-main {
               display: flex;
               justify-content: flex-end;
 
+
+              h2 {
+        
+                text-align: center;
+
+
+                @include isLarge {
+                  text-align: left;
+                }
+              }
+
               .icon-wrapper {
                 width: 100%;
                 display: flex;
-                justify-content: flex-end;
+                justify-content: center;
+                margin-top: 50px;
+
+                @include isLarge {
+                  justify-content: flex-end;
+                  margin-top: 0;
+                }
               }
             }
           }
@@ -701,7 +726,11 @@ section.latest-stories {
   background-color: $color-secondary;
   position: relative;
   display: flex;
-  padding: 80px 0;
+  padding: 50px 0 0;
+  
+  @include isLarge {
+    padding: 80px 0;
+  }
 
   .container {
 
@@ -711,14 +740,30 @@ section.latest-stories {
       align-items: center;
       justify-content: center;
 
+
+  
+
       .col-container {
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+
+
+        @include isLarge {
+          flex-direction: row;
+        }
 
         .col-item {
-          width: 27%;
+          width: 80%;
           display: flex;
           align-items: flex-start;
+          margin-bottom: 50px;
+
+          @include isLarge {
+            width: 27%;
+            margin-bottom: 0;
+          }
 
           div.wline {
             width: 75px;
@@ -743,10 +788,14 @@ section.latest-stories {
 
 
             p {
-              font-size: 28px;
+              font-size: 22px;
               font-weight: 300;
               line-height: 36px;
               margin-top: 20px;
+
+              @include isLarge {
+                font-size: 28px;
+              }
             }
           }
 
@@ -766,7 +815,12 @@ section.col-instagram {
   background-color: $color-secondary;
   position: relative;
   display: flex;
-  padding: 80px 0;
+  padding: 50px 0;
+
+
+  @include isLarge {
+    padding: 80px 0;
+  }
 
   .container {
 
@@ -786,6 +840,12 @@ section.col-instagram {
           // justify-content: space-between;
           justify-content: center;
           // gap: 30px;
+          flex-direction: column;
+          align-items: center;
+
+          @include isLarge {
+            flex-direction: row;
+          }
 
           .image-container {
             margin: 10px;
