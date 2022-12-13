@@ -212,13 +212,26 @@ section.about {
       .col-container {
         display: flex;
         justify-content: space-between;
-        padding: 70px 0;
+        padding: 70px 0 0;
+        flex-direction: column;
+        align-items: center;
+        
+
+        @include isLarge {
+          flex-direction: row;
+        }
 
         .col-item {
           display: flex;
           flex-direction: column;
           align-items: center;
-          width: 33%;
+          width: 100%;
+          margin-bottom: 50px;
+
+          @include isLarge {
+            width: 33%;
+            margin-bottom: 0;
+          }
 
 
           p {
@@ -237,7 +250,11 @@ section.what-we-do {
   background-color: $color-secondary;
   position: relative;
   display: flex;
-  padding: 50px 0 80px;
+  padding: 0 0 80px;
+
+  @include isLarge {
+    padding: 0 0 80px;
+  }
 
   .container {
 
@@ -250,23 +267,43 @@ section.what-we-do {
       .col-container {
         display: flex;
         justify-content: space-between;
-        padding: 70px 0;
+        flex-direction: column;
+        align-items: center;
+
+
+        @include isLarge {
+          flex-direction: row;
+          padding: 70px 0;
+        }
+ 
 
         .col-item {
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
-          width: 45%;
+          align-items: center;
+          width: 100%;
+
+          @include isLarge {
+            width: 45%;
+            margin-bottom: 0;
+            align-items: flex-start;
+          }
 
 
           p {
             text-align: center;
+            
           }
 
           &:nth-child(1) {
+            margin-bottom: 50px;
 
             h2 {
-              text-align: left;
+              text-align: center;
+
+              @include isLarge {
+                text-align: left;
+              }
             }
 
             .img-container {
@@ -274,7 +311,11 @@ section.what-we-do {
   
               picture {
                 display: flex;
-                justify-content: flex-end;
+                justify-content: center;
+
+                @include isLarge {
+                  justify-content: flex-end;
+                }
               }
             }
           }
@@ -282,11 +323,27 @@ section.what-we-do {
           &:nth-child(2) {
 
             .img-container {
+              width: 100%;
               margin-bottom: 40px;
+
+              picture {
+                display: flex;
+                justify-content: center;
+
+                @include isLarge {
+                  justify-content: flex-start;
+                }
+              }
             }
 
             p {
-              text-align: left;
+              text-align: center;
+              margin-bottom: 50px;
+
+              @include isLarge {
+                text-align: left;
+                margin-bottom: 20px;
+              }
             }
           }
 
@@ -303,7 +360,6 @@ section.iv-vitamin {
   background-color: $color-secondary;
   position: relative;
   display: flex;
-  padding: 80px 0;
 
   .container {
 
@@ -372,20 +428,21 @@ section.iv-vitamin {
               justify-content: center;
               transition: 0.3s;
               top: 96%;
-              width: 35px;
-              height: 35px;
+              width: 60px;
+              height: 60px;
               padding: 12px;
-              right: 35%;
+              right: 10%;
               transform: translate(-50%, -50%);
 
-              @include isSmall {
-                width: 40px;
-                height: 40px;
-              }
+              // @include isSmall {
+              //   width: 40px;
+              //   height: 40px;
+              // }
 
               @include isMedium {
                 width: 60px;
                 height: 60px;
+                right: 35%;
               }
         
         
@@ -416,7 +473,7 @@ section.iv-vitamin {
             .swiper-button-prev {
               rotate: 180deg;
               // left: 35%;
-              left: 35%;
+              left: 10%;
               transform: translate(-50%, 50%);
               opacity: 0.13;
 
@@ -428,6 +485,12 @@ section.iv-vitamin {
               @include is1500 {
                 
               }
+
+              @include isMedium {
+    
+                left: 35%;
+              }
+        
             }
 
         
@@ -456,7 +519,11 @@ section.col-main {
     z-index: 2;
     display: flex;
     max-width: 1400px;
-    padding: 0;
+    padding: 0 15px;
+
+    @include isLarge {
+      padding: 0;
+    }
 
 
     .content {
@@ -495,15 +562,27 @@ section.col-main {
           &:nth-child(1) {
 
             .col-content {
-              width: 80%;
+              width: 100%;
               margin: 0 auto;
               display: flex;
-              align-items: flex-start;
+              align-items: center;
               justify-content: center;
+              margin-bottom: 50px;
+
+              @include isLarge {
+                width: 80%;
+                align-items: flex-start;
+                margin-bottom: 0;
+              }
 
 
               p {
                 margin-bottom: 50px;
+                text-align: center;
+
+                @include isLarge {
+                  text-align: left;
+                }
               }
 
               h3 {
@@ -514,9 +593,22 @@ section.col-main {
               .treatment-links {
                 display: flex;
                 margin: 10px 0 50px;
+                flex-direction: column;
+                
+
+                @include isLarge {
+                  flex-direction: row;
+                  align-items: center;
+                }
 
                 ul {
-                  
+                  padding: 0;
+
+                  @include isLarge {
+                    padding-left: 40px;
+                  }
+
+
                   li {
                     list-style: none;
 
@@ -537,7 +629,11 @@ section.col-main {
                   }
 
                   &:nth-child(2) {
-                    padding-left: 60px;
+                    padding-left: 0;
+
+                    @include isLarge {
+                      padding-left: 60px;
+                    }
                   }
                 }
 
@@ -548,9 +644,14 @@ section.col-main {
 
 
           &:nth-child(2) {
-            width: 40%;
+            width: 100%;
             display: flex;
-            justify-content: flex-end;
+            justify-content: center;
+
+            @include isLarge {
+              width: 40%;
+              justify-content: flex-end;
+            }
 
 
             .col-content {
