@@ -238,7 +238,7 @@
 			display: flex;
 			justify-content: space-between;
 			width: 100%;
-			align-items: flex-end;
+			align-items: center;
 
       @include isXLarge {
         // margin: 0 30px;
@@ -272,9 +272,17 @@
 					height: 100%;
 
 					@media screen and (max-width: 992px) {
-						width: 150px;
+						width: 200px;
 					}
 				}
+			}
+		}
+
+		div.col-search {
+			display: none;
+
+			@include isLarge {
+				display: block;
 			}
 		}
 
@@ -351,7 +359,7 @@
 			display: block;
 			z-index: 1231;
 			right: 20px;
-			top: 25px;
+			top: 10px;
 
 			// show only desktop
 			@media screen and (min-width: 992px) {
@@ -652,7 +660,7 @@
 						}
 
             @media screen and (max-width: 1250px) {
-							font-size: 16px;
+							font-size: 18px;
 							line-height: 1.2;
 						}
 
