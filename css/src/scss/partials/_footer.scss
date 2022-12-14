@@ -13,6 +13,7 @@
   .container {
     display: flex;
     justify-content: space-between;
+  
 
     @media screen and (max-width: 992px) {
       flex-direction: column;
@@ -190,6 +191,7 @@
       width: 100%;
       margin-top: 50px;
 
+
       &:nth-child(1) {
         background-color: $color-secondary;
         display: flex;
@@ -231,7 +233,7 @@
 
         @include isLarge {
           justify-content: flex-end;
-          padding: 10px 0;
+          padding: 10px 15px;
         }
 
         .flexcen {

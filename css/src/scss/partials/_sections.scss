@@ -241,6 +241,13 @@ section.about {
         
         }
       }
+
+      .btn-container {
+      
+        @include isLarge {
+          margin-top: 50px;
+        }
+      }
     }
   }
 
@@ -273,7 +280,7 @@ section.what-we-do {
 
         @include isLarge {
           flex-direction: row;
-          padding: 70px 0;
+          padding: 70px 0 40px;
         }
  
 
@@ -360,6 +367,10 @@ section.iv-vitamin {
   background-color: $color-secondary;
   position: relative;
   display: flex;
+
+  @include isLarge {
+    padding: 50px 0;
+  }
 
   .container {
 
@@ -1608,7 +1619,7 @@ section.welcome-interior {
     left: 50%;
     top: 65%;
     transform: translate(-50%, -50%);
-    padding-top: 100px;
+    padding-top: 70px;
 
     @include isRetina {
       padding-top: 0;
@@ -1713,6 +1724,8 @@ section.col-interior {
         }
         p {
           text-align: center;
+
+     
         }
       }
 
@@ -1771,6 +1784,11 @@ section.col-interior {
               p {
                 margin-bottom: 50px;
                 text-align: center;
+
+
+                @include isLarge {
+                  text-align: left;
+                }
               }
 
               h3 {
@@ -1843,6 +1861,8 @@ section.options {
         flex-direction: column;
         align-items: center;
 
+    
+
         @include isXLarge {
           flex-direction: row;
         }
@@ -1857,9 +1877,18 @@ section.options {
           padding: 80px  20px 40px;
           margin-bottom: 50px;
 
+
+
           @include isLarge {
             margin-bottom: 0;
+            width: 50%;
+            margin-bottom: 50px;
+          }
+
+          @include isXLarge {
+            margin-bottom: 0;
             width: 32%;
+            height: 680px;
           }
 
           .icon-wrapper {
