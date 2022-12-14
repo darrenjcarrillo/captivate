@@ -1161,14 +1161,22 @@ section.col-beauty-bar {
   display: flex;
   align-items: center;
   background-color: $color-secondary;
-  padding: 100px 0;
+  padding: 50px 0;
+
+  @include isLarge {
+    padding: 100px 0;
+  }
 
   .container {
     position: relative;
     z-index: 2;
     display: flex;
     max-width: 1400px;
-    padding: 0;
+    padding: 0 15px;
+
+    @include isLarge {
+      padding: 0;
+    }
 
 
     .content {
@@ -1183,6 +1191,8 @@ section.col-beauty-bar {
         align-items: flex-start;
         flex-direction: column;
         width: 100%;
+
+
 
         @include isLarge {
           flex-direction: row;
@@ -1210,7 +1220,12 @@ section.col-beauty-bar {
             }
 
             .text-wrapper {
-              padding-left: 90px;
+              text-align: center;
+
+              @include isLarge {
+                padding-left: 90px;
+                align-items: left;
+              }
             }
           }
 
@@ -1218,11 +1233,16 @@ section.col-beauty-bar {
           &:nth-child(1) {
 
             .col-content {
-              width: 80%;
+              width: 100%;
               margin: 0 auto;
               display: flex;
-              align-items: flex-start;
+              align-items: center;
               justify-content: center;
+              
+              @include isLarge {
+                width: 80%;
+                align-items: flex-start;
+              }
 
 
               p {
@@ -1238,9 +1258,16 @@ section.col-beauty-bar {
 
 
           &:nth-child(2) {
-            width: 40%;
+            width: 100%;
             display: flex;
-            justify-content: flex-end;
+            justify-content: center;
+            margin: 50px 0;
+
+            @include isLarge {
+              width: 40%;
+              justify-content: flex-end;
+              margin: 0;
+            }
 
 
             .col-content {
@@ -1296,6 +1323,7 @@ section.col-beauty-bar {
         &:nth-child(2) {
 
           .col-item {
+            margin: 0;
 
             .col-content {
               
@@ -1446,7 +1474,11 @@ section.benefits {
   background-color: $color-secondary;
   position: relative;
   display: flex;
-  padding: 80px 0;
+  padding: 50px 0;
+
+  @include isLarge {
+    padding: 80px 0;
+  }
 
   .container {
 
@@ -1458,21 +1490,37 @@ section.benefits {
 
       h2 {
         text-align: center;
-        margin-bottom: 0;
+        margin-bottom: 50px;
         
+        @include isLarge {
+          margin-bottom: 0;
+        }
       }
 
 
       .col-container {
         display: flex;
         justify-content: space-between;
-        padding: 70px 0;
+       
+        flex-direction: column;
+        align-items: center;
+
+        @include isLarge {
+          flex-direction: row;
+          padding: 70px 0;
+        }
 
         .col-item {
           display: flex;
           flex-direction: column;
           align-items: center;
-          width: 30%;
+          width: 100%;
+          margin-bottom: 50px;
+
+          @include isLarge {
+            width: 30%;
+            margin-bottom: 0;
+          }
 
 
           p {
@@ -1566,8 +1614,6 @@ section.welcome-interior {
       padding-top: 0;
     }
     
-
-
     .content {
       width: 100%;
       display: flex;
@@ -1657,10 +1703,14 @@ section.col-interior {
       align-items: center;
 
       .text-container {
-        width: 70%;
+        width: 100%;
         padding-bottom: 50px;
 
         margin: 0 auto;
+
+        @include isLarge {
+          width: 70%;
+        }
         p {
           text-align: center;
         }
@@ -1696,7 +1746,11 @@ section.col-interior {
           .col-content {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
+
+            @include isLarge {
+              align-items: flex-start;
+            }
           }
 
 
@@ -1706,12 +1760,17 @@ section.col-interior {
               width: 80%;
               margin: 0 auto;
               display: flex;
-              align-items: flex-start;
+              align-items: center;
               justify-content: center;
+
+              @include isLarge {
+                align-items: flex-start;
+              }
 
 
               p {
                 margin-bottom: 50px;
+                text-align: center;
               }
 
               h3 {
@@ -1724,9 +1783,15 @@ section.col-interior {
 
 
           &:nth-child(2) {
-            width: 48%;
+            width: 100%;
             display: flex;
-            justify-content: flex-end;
+            justify-content: center;
+            
+
+            @include isLarge {
+              width: 48%;
+              justify-content: flex-end;
+            }
 
             .col-content {
               display: flex;
@@ -1749,7 +1814,11 @@ section.options {
   background-color: $color-secondary;
   position: relative;
   display: flex;
-  padding: 80px 0;
+  padding: 50px 0 0;
+  
+  @include isLarge {
+    padding: 80px 0;
+  }
 
   .container {
     max-width: 1400px;
@@ -1770,7 +1839,13 @@ section.options {
       .col-container {
         display: flex;
         justify-content: space-between;
-        padding: 70px 0;
+        padding: 70px 0 0;
+        flex-direction: column;
+        align-items: center;
+
+        @include isXLarge {
+          flex-direction: row;
+        }
 
         .col-item {
           display: flex;
@@ -1778,10 +1853,14 @@ section.options {
           justify-content: space-between;
           align-items: center;
           border: 1px solid $f;
-          width: 32%;
-          padding: 80px  30px 40px;
+          width: 100%;
+          padding: 80px  20px 40px;
+          margin-bottom: 50px;
 
-    
+          @include isLarge {
+            margin-bottom: 0;
+            width: 32%;
+          }
 
           .icon-wrapper {
             display: flex;
@@ -1809,6 +1888,7 @@ section.options {
 
           p {
             text-align: center;
+            line-height: 28px;
           }
 
           h4 {
