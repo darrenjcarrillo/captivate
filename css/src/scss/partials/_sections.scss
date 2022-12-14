@@ -512,7 +512,7 @@ section.col-main {
   display: flex;
   align-items: center;
   background-color: $color-secondary;
-  padding: 50px 0;
+  padding: 80px 0 0;
 
   @include isLarge {
     padding: 100px 0 50px;
@@ -726,7 +726,7 @@ section.latest-stories {
   background-color: $color-secondary;
   position: relative;
   display: flex;
-  padding: 50px 0 0;
+  padding: 80px 0 0;
   
   @include isLarge {
     padding: 80px 0;

@@ -224,9 +224,15 @@
       &:nth-child(2) {
         background-color: $f;
         margin: 0;
-        padding: 10px 0;
+        padding: 10px 15px;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
+        
+
+        @include isLarge {
+          justify-content: flex-end;
+          padding: 10px 0;
+        }
 
         .flexcen {
           margin: 0;
