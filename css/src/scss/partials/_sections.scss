@@ -1083,14 +1083,14 @@ section.form {
 
 section.welcome-br-pg {
   position: relative;
-  min-height: 700px;
+  min-height: 500px;
   background-color: $color-secondary;
   display: flex;
   align-items: center;
   margin-top: 45px;
 
   @include isRetina {
-    min-height: 700px;
+    min-height: 600px
   }
 
 
@@ -1104,7 +1104,7 @@ section.welcome-br-pg {
     left: 50%;
     top: 65%;
     transform: translate(-50%, -50%);
-    padding-top: 100px;
+    // padding-top: 100px;
 
     @include isRetina {
       padding-top: 0;
@@ -1123,19 +1123,28 @@ section.welcome-br-pg {
 
       h1.sec-title {
         font-weight: bold;
-      }
-
-      h2 {
-        text-transform: uppercase;
-        letter-spacing: 5px;
-      }
       
-      p {
-        font-weight: bold;
-        margin-bottom: 0;
-        line-height: 1.8;
-
       }
+
+
+      .breadcrumbs {
+        margin-top: 100px;
+        
+        a {
+          font-size: 16px;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+
+        span.l {
+          font-size: 16px;
+          font-weight: 600;
+          color: $color-main;
+          margin: 0 5px;
+          
+        }
+      }
+  
 
       .btn-container {
         margin-top: 50px;
