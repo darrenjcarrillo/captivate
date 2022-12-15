@@ -200,11 +200,11 @@ h1 {
   font-size: 60px;
   margin-bottom: $header-margin;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 10px;
 
 
-  @include isXLarge {
-    
+  @include isRetina {
+  
   }
 
 
@@ -221,6 +221,7 @@ h2 {
   margin-top: 0;
   line-height: 1.5;
   font-family: $font-secondary;
+  // letter-spacing: 10px;
 
   @include isXLarge {
     font-size: 40px;
@@ -240,6 +241,7 @@ h3 {
   letter-spacing: 2px;
   line-height: 23px;
   color: $color-main;
+  // letter-spacing: 10px;
 }
 
 
@@ -287,6 +289,10 @@ p {
   font-size: 16px;
   font-weight: 200;
   line-height: 28px;
+
+  @include is1500 {
+    font-size: 18px;
+  }
 
 
   &.w {
